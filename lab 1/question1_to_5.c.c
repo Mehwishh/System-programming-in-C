@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-  //  1. Write a C program that accepts an employee's ID, total worked hours in a month and the amount received per hour. Print the ID and salary (with two decimal places) of the employee for a particular month.
+  // 1. Write a C program that accepts an employee's ID, total worked hours in a month and the amount received per hour. Print the ID and salary (with two decimal places) of the employee for a particular month.
 
   int employeeId;
   printf("Enter employee ID: ");
