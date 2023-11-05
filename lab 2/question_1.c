@@ -10,7 +10,6 @@ int main()
         sum += i;
     }
     printf("\nSum of the first %d odd numbers: %d\n", n, sum);
-
     printf("Using a While loop:\n");
     int i = 1, sum = 0, n;
     printf("Entre number to print n odd numbers: ");
