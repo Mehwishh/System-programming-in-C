@@ -1,9 +1,8 @@
 
-
+// Write a C program to add two distances in inch-feet system using structures.
 #include <stdio.h>
 struct Distance
-{// Write a C program to add two distances in inch-feet system using structures.
-
+{
     int ft;
     int inch;
 };

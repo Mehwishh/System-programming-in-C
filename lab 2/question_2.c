@@ -2,7 +2,8 @@
 
 int main()
 {
-    int rows, x, y, space;
+    // 2. Write a C program to make the following pattern as a pyramid with an asterisk.int rows, x, y, space;
+    
     printf("Enter the number of rows for the pyramid: ");
     scanf("%d", &rows);
     for (x = 1; x <= rows; x++)
