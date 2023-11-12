@@ -4,7 +4,6 @@
 // malloc and update the memory allocation using realloc when adding new contacts.
 // Implement an option to delete a contact and free the memory. Ensure that memory is
 // properly managed throughout the program's execution.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

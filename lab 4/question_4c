@@ -62,7 +62,6 @@ int main() {
  insertAfter(head, 4, 3);
  insertAfter(head, 5, 4);
  printList(head);
-
  int count = nodeCount(head), i = 0;
  struct Node *temp = head;
  struct Node *temp2;

@@ -1,7 +1,7 @@
 // 2. Write a C program to merge two sorted singly linked lists into a single sorted linked list.
 #include <stdio.h>
 #include <stdlib.h>
-    struct Node
+ struct Node
 {
     int data;
     struct Node *next;
