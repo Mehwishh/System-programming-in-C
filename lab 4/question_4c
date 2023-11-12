@@ -1,0 +1,79 @@
+// 4. Write a C program that removes elements with odd indices from a singly linked list.
+#include <stdio.h>
+#include <stdlib.h>
+struct Node
+{
+ int data;
+ struct Node *next;
+};
+struct Node *createNode(int data)
+{
+ struct Node *newNode = malloc(sizeof(struct Node));
+ if (newNode == NULL)
+ {
+ fprintf(stderr, "Memory allocation failed!");
+ exit(0);
+ }
+ newNode->data = data;
+ newNode->next = NULL;
+ return newNode;
+}
+struct Node *insertAfter(struct Node *head, int data, int search)
+{
+ struct Node *current = head;
+ while (current != NULL && current->data != search)
+ {
+ current = current->next;
+ }
+ if (current->data == search)
+ {
+ struct Node *new = createNode(data);
+ new->next = current->next;
+ current->next = new;
+ }
+ else
+ {
+ printf("Node not found!\n");
+ }
+ return head;
+}
+int nodeCount(struct Node* head){
+ struct Node* current = head;
+ int count = 0;
+ while(current != NULL){
+ count++;
+ current = current->next;
+ }
+ return count;
+}
+struct Node *printList(struct Node *head) {
+ struct Node *current = head;
+ while (current != NULL)
+ {
+ printf("%d -> ", current->data);
+ current = current->next;
+ }
+ printf("NULL\n");
+ return head; }
+int main() {
+ struct Node *head = createNode(1);
+ insertAfter(head, 2, 1);
+ insertAfter(head, 3, 2);
+ insertAfter(head, 4, 3);
+ insertAfter(head, 5, 4);
+ printList(head);
+
+ int count = nodeCount(head), i = 0;
+ struct Node *temp = head;
+ struct Node *temp2;
+ while(temp!=NULL){
+ temp2 = temp->next;
+ if(temp2!=NULL){
+ temp->next = temp2->next;
+ }
+ free(temp2);
+ temp = temp->next;
+ i+=2;
+ }
+ printList(head);
+ return 0; }
